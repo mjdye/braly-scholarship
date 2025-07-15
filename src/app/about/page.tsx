@@ -46,7 +46,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-4xl font-bold text-warm-gold mb-2">
-                80
+                80+
               </div>
               <div className="">
                 Scholarships Awarded
@@ -54,7 +54,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-4xl font-bold  text-warm-gold mb-2">
-              60
+              60+
               </div>
               <div className="">
                 Recipients
