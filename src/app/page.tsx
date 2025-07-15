@@ -1,103 +1,82 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className=" items-center justify-items-center font-[family-name:var(--font-geist-sans)]">
+      <main className=" w-full flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <div className="flex w-full flex-col relative">
+          <div
+            className="w-full h-[480px] bg-cover bg-center"
+            style={{ backgroundImage: "url('/heroImage.png')" }}
+          />
+          <div className="flex flex-col mx-auto gap-8 bg-accent-blue text-off-white max-w-[var(--body-max-width)] lg:w-[var(--content-max-width)] p-8 py-10 text-center mt-[-120px] ">
+            <h2 className="md:text-6xl text-4xl font-bold">
+              The Dr. S.U. Braly Scholarship
+            </h2>
+            <p className="md:text-2xl text-lg max-w-[600px] mx-auto">
+              The Braly Scholarship Fundraiser aims to raise essential funds to
+              support scholarships for aspiring and current healthcare workers.
+            </p>
+            <div className="flex gap-4 mx-auto ">
+              <a
+                href="https://www.showclix.com/tickets/the-braly-scholarship-fundraiser-award-dinner--nq7ha42"
+                className="bg-warm-gold text-accent-blue px-8 py-4 rounded-md text-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Donate
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-[var(--body-max-width)] mx-auto grid grid-cols-1 gap-8 md:grid-cols-[2fr_1fr] py-8">
+          <div className="flex flex-col md:flex-row gap-4 p-4">
+            <img
+              src="/drBraly.png"
+              alt="Dr. Braly"
+              className="w-full md:w-1/3"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="flex flex-col gap-4 px-4 py-2 justify-center">
+              <h2 className="text-2xl font-bold md:text-4xl">
+                About Dr. Braly
+              </h2>
+              <p className="text-lg">
+                Dr. S. U. Braly was a great humanitarian, philanthropist, and
+                friend of Paulding County. His calling for the practice of
+                medicine and his compassion for patients made him a giant among
+                men. Dr. Braly came to Paulding County in 1953 from his home in
+                Henderson, TN.
+              </p>
+              <Link
+                href="/about-dr-braly"
+                className="text-warm-gold font-bold text-lg"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col bg-white px-8 py-8 rounded-md items-start">
+            <h2 className="text-2xl font-bold mb-4 w-full text-center border-b-2 border-accent-blue pb-4">
+              Upcoming Events
+            </h2>
+            <div className="flex flex-col grow-1 justify-center">
+              <p className="text-xl mb-2 font-bold">
+                Braly Scholarship Fundraiser and Award Dinner
+              </p>
+              <p className="text-xl mb-1">August 23rd, 2025</p>
+              <p className="text-xl mb-4">Dallas (Theater) Civic Center</p>
+              <a
+                href="https://www.showclix.com/tickets/the-braly-scholarship-fundraiser-award-dinner--nq7ha42"
+                className=" w-full text-center bg-accent-blue text-white px-8 py-4 rounded-md text-lg"
+              >
+                Buy Tickets
+              </a>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      
     </div>
   );
 }
