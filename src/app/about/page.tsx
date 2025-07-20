@@ -1,7 +1,10 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Link from "next/link";
 
 export default function About() {
   return (
+    <>
+    <GoogleAnalytics gaId="G-SP9SH0JEZQ" />
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         {/* Header Section */}
@@ -89,6 +92,7 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
