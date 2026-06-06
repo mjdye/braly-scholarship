@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SP9SH0JEZQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SP9SH0JEZQ');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Dr. S.U. Braly Scholarship</title>
+<meta name="description" content="The Dr. S.U. Braly Scholarship supports aspiring and current healthcare workers in Paulding County, Georgia — honoring a legacy of compassionate care." />
+<link rel="icon" href="assets/favicons/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/favicons/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="assets/favicons/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<style>
+  /* ---------- Hero ---------- */
+  .hero { position: relative; overflow: hidden; }
+  .hero-grid {
+    max-width: var(--wide); margin-inline: auto; padding: clamp(40px,6vw,84px) 28px clamp(48px,7vw,96px);
+    display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(36px,5vw,80px); align-items: center;
+  }
+  .hero-copy { max-width: 560px; }
+  .hero h1 { color: var(--navy); margin-top: 20px; line-height: 1.12; text-wrap: normal; }
+  .hero h1 .accent { color: var(--gold-deep); font-style: italic; }
+  .hero-rule { width: 54px; height: 2px; background: var(--gold); margin-top: 28px; }
+  .hero-lead { margin-top: 24px; max-width: 46ch; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+  .hero-meta { display: flex; align-items: center; gap: 18px; margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--ink-muted); }
+  .hero-meta b { color: var(--navy); font-weight: 600; }
+  .hero-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+
+  .hero-media { position: relative; }
+  .hero-photo { aspect-ratio: 4/5; border-radius: 4px; }
+  .hero-photo::after {
+    content: ""; position: absolute; inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+    background: linear-gradient(180deg, transparent 55%, rgba(22,39,63,.32));
+    pointer-events: none; border-radius: 4px;
+  }
+  .hero-frame-edge { position: absolute; inset: -14px -14px auto auto; width: 62%; height: 62%; border: 1.5px solid var(--gold); border-radius: 4px; z-index: -1; }
+  .hero-chip {
+    position: absolute; left: -26px; bottom: 34px;
+    background: var(--card); border-radius: 4px; padding: 18px 22px;
+    box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 16px;
+    border-left: 3px solid var(--gold);
+  }
+  .hero-chip .num { font-family: var(--font-display); font-weight: 700; font-size: 2.5rem; color: var(--navy); line-height: 1; }
+  .hero-chip .lbl { font-size: .82rem; color: var(--ink-soft); line-height: 1.25; max-width: 13ch; }
+
+  /* ---------- Event ribbon ---------- */
+  .ribbon { background: var(--navy); }
+  .ribbon-inner {
+    max-width: var(--content); margin-inline: auto; padding: 18px 28px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 22px;
+    color: var(--on-navy); font-size: .98rem; text-align: center;
+  }
+  .ribbon .tag { font-weight: 600; letter-spacing: .18em; text-transform: uppercase; font-size: .72rem; color: var(--gold-bright); }
+  .ribbon a.lnk { color: var(--gold-bright); font-weight: 600; border-bottom: 1px solid rgba(216,178,101,.5); padding-bottom: 1px; }
+  .ribbon a.lnk:hover { color: #fff; border-color: #fff; }
+  .ribbon .sep { color: var(--on-navy-mut); }
+
+  /* ---------- Pillars ---------- */
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 52px; }
+  .pillar { }
+  .pillar .icn { width: 46px; height: 46px; color: var(--gold-deep); margin-bottom: 18px; }
+  .pillar h3 { font-size: 1.62rem; color: var(--navy); }
+  .pillar p { margin-top: 10px; color: var(--ink-soft); font-size: 1rem; }
+
+  /* ---------- Impact band ---------- */
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px,5vw,72px); align-items: center; }
+  .impact-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(243,237,224,.14); border: 1px solid rgba(243,237,224,.14); border-radius: 4px; overflow: hidden; }
+  .stat { padding: 30px 28px; background: var(--navy); }
+  .stat .n { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.8rem,5vw,3.7rem); color: var(--gold-bright); line-height: 1; }
+  .stat .t { margin-top: 10px; font-size: .95rem; color: var(--on-navy-mut); letter-spacing: .02em; }
+  .impact-photo { aspect-ratio: 5/6; border-radius: 4px; }
+
+  /* ---------- Split (Dr Braly) ---------- */
+  .split { display: grid; grid-template-columns: .86fr 1.14fr; gap: clamp(34px,5vw,72px); align-items: center; }
+  .braly-photo { position: relative; }
+  .braly-photo .photo-frame { aspect-ratio: 4/5; filter: saturate(.92) contrast(1.02); }
+  .braly-photo .cap { margin-top: 14px; font-size: .82rem; color: var(--ink-muted); font-style: italic; }
+  .braly-photo .edge { position: absolute; inset: auto auto -14px -14px; width: 55%; height: 55%; border: 1.5px solid var(--gold); border-radius: 4px; z-index: -1; }
+  blockquote.pull { font-family: var(--font-display); font-style: italic; font-size: clamp(1.4rem,2.4vw,1.95rem); color: var(--navy); line-height: 1.3; margin: 0 0 6px; }
+
+  /* ---------- Event feature card ---------- */
+  .event-card {
+    display: grid; grid-template-columns: 1.1fr 1fr; background: var(--card);
+    border-radius: 5px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--line);
+  }
+  .event-card .media { position: relative; min-height: 340px; }
+  .event-card .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .event-card .body { padding: clamp(30px,4vw,52px); display: flex; flex-direction: column; }
+  .date-badge { display: inline-flex; align-items: stretch; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; align-self: flex-start; margin-bottom: 26px; }
+  .date-badge .m { background: var(--navy); color: var(--gold-bright); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: .72rem; padding: 10px 14px; display: grid; place-items: center; }
+  .date-badge .d { padding: 8px 18px; display: flex; flex-direction: column; justify-content: center; }
+  .date-badge .d .big { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--navy); line-height: 1; }
+  .date-badge .d .yr { font-size: .76rem; color: var(--ink-muted); letter-spacing: .1em; }
+  .event-card ul.deets { list-style: none; padding: 0; margin: 18px 0 28px; display: flex; flex-direction: column; gap: 12px; }
+  .event-card ul.deets li { display: flex; gap: 12px; align-items: center; color: var(--ink-soft); font-size: 1rem; }
+  .event-card ul.deets svg { width: 19px; height: 19px; color: var(--gold-deep); flex: none; }
+  .event-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto; }
+  .tba { display: inline-block; font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; }
+
+  /* ---------- Honorees ---------- */
+  .honorees { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 44px; }
+  .honoree { background: var(--card); border: 1px solid var(--line); border-radius: 5px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+  .honoree:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .honoree .ph { aspect-ratio: 16/10; background: var(--navy); position: relative; overflow: hidden; }
+  .honoree .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .honoree .meta { padding: 22px 24px 26px; }
+  .honoree .role { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; }
+  .honoree h3 { font-size: 1.7rem; color: var(--navy); margin-top: 8px; }
+
+  /* ---------- How to apply ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; margin-top: 48px; counter-reset: step; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 32px 28px; position: relative; }
+  .step::before {
+    counter-increment: step; content: counter(step,decimal-leading-zero);
+    font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; color: var(--gold);
+    display: block; margin-bottom: 14px;
+  }
+  .step h3 { font-size: 1.4rem; color: var(--navy); }
+  .step p { margin-top: 8px; color: var(--ink-soft); font-size: .98rem; }
+  .apply-note { margin-top: 34px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+
+  /* ---------- Sponsors ---------- */
+  .sponsor-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; margin-top: 42px; }
+  .sponsor-tile {
+    aspect-ratio: 3/2; border: 1px solid var(--line); border-radius: 4px; background: var(--card);
+    display: grid; place-items: center; text-align: center; padding: 14px;
+    font-family: var(--font-mono, ui-monospace, monospace); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted);
+    transition: border-color .25s var(--ease), color .25s var(--ease);
+  }
+  .sponsor-tile:hover { border-color: var(--gold); color: var(--gold-deep); }
+  .sponsor-tile .tier { display: block; font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--navy); text-transform: none; letter-spacing: 0; margin-bottom: 4px; }
+
+  /* ---------- Gallery strip ---------- */
+  .gal-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px; }
+  .gal-strip a { position: relative; overflow: hidden; border-radius: 3px; aspect-ratio: 1/1; }
+  .gal-strip a:first-child { grid-row: span 2; grid-column: span 2; aspect-ratio: 1/1; }
+  .gal-strip img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+  .gal-strip a:hover img { transform: scale(1.05); }
+  .gal-strip .more { display: grid; place-items: center; background: var(--navy); color: var(--on-navy); }
+  .gal-strip .more span { font-family: var(--font-display); font-size: 1.1rem; }
+
+  /* ---------- Donate CTA ---------- */
+  .cta-final { position: relative; overflow: hidden; text-align: center; }
+  .cta-final .wrap { position: relative; z-index: 1; }
+  .cta-final h2 { color: var(--on-navy); }
+  .cta-final p { color: var(--on-navy-mut); max-width: 54ch; margin: 18px auto 0; }
+  .cta-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 34px; }
+  .cta-orn { position: absolute; inset: 0; opacity: .5; background:
+    radial-gradient(60% 80% at 85% 10%, rgba(194,149,69,.20), transparent 60%),
+    radial-gradient(50% 70% at 10% 90%, rgba(194,149,69,.14), transparent 60%); }
+
+  .section-head { max-width: 640px; }
+  .section-head.center { margin-inline: auto; text-align: center; }
+  .section-head h2 { margin-top: 16px; color: var(--navy); }
+  .section-head p { margin-top: 16px; }
+
+  @media (max-width: 980px) {
+    .pillars, .steps, .sponsor-grid { grid-template-columns: repeat(2,1fr); }
+    .impact-grid, .split, .event-card, .honorees { grid-template-columns: 1fr; }
+    .impact-grid .impact-photo, .braly-photo { order: -1; }
+  }
+  @media (max-width: 760px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-media { max-width: 460px; }
+    .hero-chip { left: 8px; }
+    .gal-strip { grid-template-columns: repeat(2,1fr); }
+    .honorees { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 540px) {
+    .pillars, .steps { grid-template-columns: 1fr; }
+    .sponsor-grid { grid-template-columns: repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="Home — Dr. S.U. Braly Scholarship">
+      <span class="brand-mark">B</span>
+      <span class="brand-name">
+        <span class="t1">Dr. S.U. Braly</span>
+        <span class="t2">Scholarship Fund</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">The Scholarship</a>
+      <a href="dr-braly.html">Dr. Braly</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="btn btn-gold nav-cta" href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Donate</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Paulding County, Georgia · Est. 1983</span>
+      <h1 class="h-xl">A&nbsp;legacy<br />of&nbsp;care,<br /><span class="accent">passed&nbsp;forward.</span></h1>
+      <div class="hero-rule"></div>
+      <p class="hero-lead lead">The Dr. S.U. Braly Scholarship raises funds to support aspiring and current healthcare workers — carrying on the compassion of the physician who gave a lifetime to this community.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Donate <span class="arr">→</span></a>
+        <a class="btn btn-outline" href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Buy Event Tickets</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>42</b> years</span><span class="dot"></span>
+        <span><b>80+</b> scholarships</span><span class="dot"></span>
+        <span>A <b>Wellstar Foundation</b> fund</span>
+      </div>
+    </div>
+    <div class="hero-media reveal" data-delay="120">
+      <span class="hero-frame-edge"></span>
+      <div class="photo-frame hero-photo">
+        <img src="assets/images/marquee-group.jpeg" alt="Supporters of the Braly Scholarship gathered beneath the Dallas Theater marquee" />
+      </div>
+      <div class="hero-chip">
+        <span class="num">60+</span>
+        <span class="lbl">healthcare careers supported</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EVENT RIBBON ===================== -->
+<div class="ribbon">
+  <div class="ribbon-inner">
+    <span class="tag">Upcoming</span>
+    <span>The Braly Scholarship Fundraiser &amp; Award Dinner returns in <b>2026</b></span>
+    <span class="sep">·</span>
+    <span>Dallas, GA - Location TBD</span>
+    <span class="sep">·</span>
+    <a class="lnk" href="#event">Details &amp; tickets →</a>
+  </div>
+</div>
+
+<!-- ===================== MISSION / PILLARS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Mission</span>
+      <h2 class="h-lg">Investing in the people who care for our community.</h2>
+      <p class="lead">Every scholarship gives preference to residents of Paulding County with a true passion for patient care — removing barriers for the nurses, technicians, and physicians our community will depend on tomorrow.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <svg class="icn" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 42S6 30 6 18A10 10 0 0 1 24 12 10 10 0 0 1 42 18C42 30 24 42 24 42Z"/><path d="M16 24h6l2-5 4 10 2-5h6"/></svg>
+        <h3>Honor</h3>
+        <p>Keeping alive the name and example of Dr. S.U. Braly — a physician, philanthropist, and friend to Paulding County.</p>
+      </div>
+      <div class="pillar reveal" data-delay="100">
+        <svg class="icn" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 10 4 19l20 9 20-9-20-9Z"/><path d="M12 23v10c0 3 5.4 6 12 6s12-3 12-6V23"/><path d="M44 19v11"/></svg>
+        <h3>Educate</h3>
+        <p>Funding tuition and training for students pursuing careers across the full spectrum of healthcare.</p>
+      </div>
+      <div class="pillar reveal" data-delay="200">
+        <svg class="icn" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="16" r="7"/><path d="M10 40c0-7.7 6.3-14 14-14s14 6.3 14 14"/><path d="M37 6v8M41 10h-8"/></svg>
+        <h3>Heal</h3>
+        <p>Strengthening local care by keeping skilled, compassionate caregivers rooted here at home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== IMPACT BAND ===================== -->
+<section class="section band-navy">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="reveal">
+        <span class="eyebrow on-navy">Four Decades of Generosity</span>
+        <h2 class="h-lg" style="color:var(--on-navy);margin-top:16px;">A community that gives, year after year.</h2>
+        <p class="lead" style="color:var(--on-navy-mut);margin-top:18px;max-width:46ch;">What began as a tribute to one beloved doctor has grown into a tradition — funded by neighbors, sponsors, and friends who believe in keeping great care close to home.</p>
+        <div class="impact-stats" style="margin-top:30px;">
+          <div class="stat"><div class="n">42</div><div class="t">Years of support</div></div>
+          <div class="stat"><div class="n">80+</div><div class="t">Scholarships awarded</div></div>
+          <div class="stat"><div class="n">60+</div><div class="t">Recipients to date</div></div>
+          <div class="stat"><div class="n">100%</div><div class="t">Local impact</div></div>
+        </div>
+      </div>
+      <div class="photo-frame impact-photo reveal" data-delay="120">
+        <img src="assets/images/crowd-wide.jpeg" alt="Guests gathered at the Braly Scholarship award dinner" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DR BRALY TEASER ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="braly-photo reveal">
+        <span class="edge"></span>
+        <div class="photo-frame">
+          <img src="assets/images/drBraly.png" alt="Portrait of Dr. S.U. Braly" />
+        </div>
+        <p class="cap">Dr. S.U. Braly — Paulding County, c. 1960s</p>
+      </div>
+      <div class="reveal" data-delay="120">
+        <span class="eyebrow">The Man Behind the Mission</span>
+        <h2 class="h-lg" style="margin-top:16px;">Dr. S.U. Braly</h2>
+        <div class="kicker-rule"></div>
+        <blockquote class="pull">“A giant among men — his calling for medicine and his compassion for patients defined a generation of care.”</blockquote>
+        <p class="lead" style="margin-top:18px;">Arriving in Paulding County in 1953, Dr. Braly became a founder of the hospital that grew into Wellstar Paulding Medical Center. Beyond medicine, he donated land for the county's first public park, pool, and library — a humanitarian whose generosity still shapes the community today.</p>
+        <a class="btn btn-navy" href="dr-braly.html" style="margin-top:28px;">Read his story <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EVENT FEATURE ===================== -->
+<section class="section band-cream2" id="event">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-bottom:46px;">
+      <span class="eyebrow center">Save the Date</span>
+      <h2 class="h-lg">The Braly Scholarship Fundraiser &amp; Award Dinner</h2>
+      <p class="lead">An evening of dinner, community, and celebration — every ticket and sponsorship directly funds the next class of Braly scholars.</p>
+    </div>
+    <div class="event-card reveal">
+      <div class="media">
+        <img src="assets/images/signage-crowd.jpeg" alt="Guests arriving at the Braly Scholarship award dinner" />
+      </div>
+      <div class="body">
+        <div class="date-badge">
+          <span class="m">2026</span>
+          <span class="d"><span class="big">Date</span><span class="yr">To be announced</span></span>
+        </div>
+        <h3 class="h-md" style="color:var(--navy);">An Evening to Remember</h3>
+        <ul class="deets">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg> Dallas Theater Civic Center · Dallas, GA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg> Date &amp; full program announced soon</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11h16M4 11l2-5h12l2 5M4 11v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/></svg> Dinner, awards &amp; honoree celebration</li>
+        </ul>
+        <span class="tba">Full details coming soon</span>
+        <div class="event-actions">
+          <a class="btn btn-gold" href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Buy Tickets <span class="arr">→</span></a>
+          <a class="btn btn-outline" href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/">Become a Sponsor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 2025 HONOREES ===================== -->
+<!-- <section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">2025 Honorees</span>
+      <h2 class="h-lg">Celebrating those who give back.</h2>
+      <p class="lead">At our most recent dinner, the Braly Scholarship honored two champions of the Paulding County community for their lasting generosity and service.</p>
+    </div>
+    <div class="honorees">
+      <article class="honoree reveal">
+        <div class="ph"><img src="assets/images/speaker-blue.jpeg" alt="Honoree addressing guests at the 2025 award dinner" /></div>
+        <div class="meta">
+          <span class="role">2025 Honoree</span>
+          <h3>Jane Ragsdale</h3>
+          <p class="muted" style="margin-top:6px;">Recognized for a lifetime of service and support to Paulding County.</p>
+        </div>
+      </article>
+      <article class="honoree reveal" data-delay="120">
+        <div class="ph"><img src="assets/images/speaker-podium.jpeg" alt="Honoree recognized on stage at the 2025 award dinner" /></div>
+        <div class="meta">
+          <span class="role">2025 Honoree</span>
+          <h3>Loran Wills</h3>
+          <p class="muted" style="margin-top:6px;">Honored for devotion to the community and the cause of local healthcare.</p>
+        </div>
+      </article>
+    </div>
+    <div style="margin-top:34px;">
+      <a class="btn btn-outline" href="gallery.html">See the 2025 recap &amp; gallery <span class="arr">→</span></a>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===================== HOW TO APPLY ===================== -->
+<section class="section band-cream2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">For Students</span>
+      <h2 class="h-lg">How to apply for the scholarship.</h2>
+      <p class="lead">If you're a dedicated student with a passion for healthcare and patient care, we encourage you to apply. Preference is given to residents of Paulding County.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h3>Check eligibility</h3>
+        <p>Open to aspiring and current healthcare students, with preference for Paulding County residents pursuing patient-care careers.</p>
+      </div>
+      <div class="step reveal" data-delay="100">
+        <h3>Prepare your application</h3>
+        <p>Gather your academic records, a statement of purpose, and references that speak to your commitment to care.</p>
+      </div>
+      <div class="step reveal" data-delay="200">
+        <h3>Submit online</h3>
+        <p>Applications are managed through the Wellstar Foundation scholarship portal each award cycle.</p>
+      </div>
+    </div>
+    <div class="apply-note reveal">
+      <a class="btn btn-navy" href="https://wellstar.academicworks.com/opportunities?utf8=%E2%9C%93&term=braly" target="_blank" rel="noopener">Apply through Wellstar <span class="arr">→</span></a>
+      <span class="muted" style="font-size:.92rem;">Next application cycle opens in the fall — dates announced on this page.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPONSORS ===================== -->
+<!-- <section class="section" id="sponsor">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">With Gratitude</span>
+      <h2 class="h-lg">Our sponsors make it possible.</h2>
+      <p class="lead">The generosity of local businesses and families turns one evening into dozens of healthcare careers. Thank you to the partners who stand behind our scholars.</p>
+    </div>
+    <div class="sponsor-grid reveal">
+      <div class="sponsor-tile"><span class="tier">Presenting</span>Sponsor logo</div>
+      <div class="sponsor-tile"><span class="tier">Gold</span>Sponsor logo</div>
+      <div class="sponsor-tile"><span class="tier">Gold</span>Sponsor logo</div>
+      <div class="sponsor-tile"><span class="tier">Silver</span>Sponsor logo</div>
+      <div class="sponsor-tile"><span class="tier">Silver</span>Sponsor logo</div>
+      <div class="sponsor-tile">Sponsor logo</div>
+      <div class="sponsor-tile">Sponsor logo</div>
+      <div class="sponsor-tile">Sponsor logo</div>
+      <div class="sponsor-tile">Sponsor logo</div>
+      <div class="sponsor-tile">Sponsor logo</div>
+    </div>
+    <div class="section-head center reveal" style="margin-top:40px;">
+      <a class="btn btn-gold" href="mailto:?subject=Braly%20Scholarship%20Sponsorship">Become a Sponsor <span class="arr">→</span></a>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===================== GALLERY TEASER ===================== -->
+<section class="section band-navy">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:none;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px;">
+      <div>
+        <span class="eyebrow on-navy">From the Dinner</span>
+        <h2 class="h-lg" style="color:var(--on-navy);margin-top:14px;">Moments from 2025.</h2>
+      </div>
+      <a class="btn btn-outline on-navy" href="gallery.html">View full gallery <span class="arr">→</span></a>
+    </div>
+    <div class="gal-strip reveal">
+      <a href="gallery.html"><img src="assets/images/check-presentation.jpeg" alt="Award check presentation on stage" /></a>
+      <a href="gallery.html"><img src="assets/images/catering-wide.jpeg" alt="Catered dinner spread" /></a>
+      <a href="gallery.html"><img src="assets/images/hall-wide.jpeg" alt="Banquet hall set for the dinner" /></a>
+      <a href="gallery.html"><img src="assets/images/table-guests.jpeg" alt="Guests at their table" /></a>
+      <a href="gallery.html" class="more"><span>+ more →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DONATE CTA ===================== -->
+<section class="section cta-final band-navy">
+  <span class="cta-orn"></span>
+  <div class="wrap reveal">
+    <span class="eyebrow center on-navy">Give Today</span>
+    <h2 class="h-lg" style="margin-top:16px;">Your gift becomes someone's calling.</h2>
+    <p class="lead">Every dollar helps a future nurse, technician, or physician answer the call to care for our community — just as Dr. Braly did for so many years.</p>
+    <div class="cta-actions">
+      <a class="btn btn-gold" href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Donate Now <span class="arr">→</span></a>
+      <a class="btn btn-outline on-navy" href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Buy Event Tickets</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="t1">The Dr. S.U. Braly Scholarship</span>
+      <p>A Wellstar Foundation fund honoring the legacy of Dr. S.U. Braly by supporting aspiring and current healthcare workers in Paulding County, Georgia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="about.html">The Scholarship</a>
+      <a href="dr-braly.html">About Dr. Braly</a>
+      <a href="gallery.html">Photo Gallery</a>
+      <a href="#event">Upcoming Event</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <a href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Donate / Give</a>
+      <a href="https://foundation.wellstar.org/the-braly-scholarship-fundraiser-and-award-dinner-registration/" target="_blank" rel="noopener">Buy Tickets</a>
+      <a href="https://wellstar.academicworks.com/opportunities?utf8=%E2%9C%93&term=braly" target="_blank" rel="noopener">Apply</a>
+      <a href="https://wellstar.academicworks.com/donors/12" target="_blank" rel="noopener">Wellstar Foundation</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 The Dr. S.U. Braly Scholarship · Paulding County, Georgia</span>
+    <span>In partnership with the Wellstar Foundation</span>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
